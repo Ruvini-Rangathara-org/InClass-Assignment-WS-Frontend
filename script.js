@@ -22,7 +22,7 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     console.log(formData.get('age'))
 
 
-    fetch('YOUR_API_ENDPOINT', {
+    fetch('http://18.206.158.216/app/users', {
         method: 'POST',
         body: formData
     })
