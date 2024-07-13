@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>User Information Form</h2>
+    <form id="userForm">
+        <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            <div id="age_div">
+                <input type="date" id="dob" name="dob" placeholder="Date of Birth" required>
+                <input type="text" id="age" name="age" placeholder="Age" readonly>
+            </div>
+        </div>
+
+        <label for="image" class="file-upload">Upload your picture</label>
+        <input type="file" id="image" name="picture" accept="image/*" required>
+
+
+        <div class="button-group">
+            <button type="button" id="resetButton">Reset</button>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <div id="result"></div>
+</div>
+
+<!-- Modal for success and error messages -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modal-message"></p>
+        <button id="modal-ok">OK</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

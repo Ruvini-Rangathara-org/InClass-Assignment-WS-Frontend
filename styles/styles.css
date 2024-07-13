@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button{
+    padding: 7px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #6c3497;
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background-color: #5b1092;
+}
+
+button[type="button"] {
+    background-color: gray;
+    color: #fff;
+    margin-right: 10px;
+}
+
+button[type="button"]:hover {
+    background-color: slategrey;
+}
+
+
+
+#result {
+    margin-top: 20px;
+}
+
+#userForm{
+    padding: 10px;
+}
+
+#age_div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.file-upload{
+    cursor: pointer;
+    /*color: #6c3497;*/
+    text-align: left;
+}
+
+#dob{
+    color: slategrey;
+    margin-right: 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: end;
+}
+
+.form-group input:focus {
+    border-color: gray;
+    outline: none;
+}
+
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 35vh;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-ok {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #6c3497;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#modal-ok:hover {
+    background-color: #6c3497;
+}
