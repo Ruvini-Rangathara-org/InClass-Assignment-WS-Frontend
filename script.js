@@ -1,25 +1,24 @@
 document.getElementById('dob').addEventListener('change', function() {
     const dob = new Date(this.value);
-    const age = calculateAge(dob);
-    document.getElementById('age').value = age;
+    document.getElementById('age').value = calculateAge(dob);
 });
 
 document.getElementById('userForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
     const name = document.getElementById('name').value;
-    const age = document.getElementById('age').value;
+    const dob = document.getElementById('dob').value;
     const image = document.getElementById('image').files[0];
 
     const formData = new FormData();
     formData.append('name', name);
-    formData.append('age', age);
+    formData.append('dob', dob);
     formData.append('image', image);
 
     console.log()
     console.log("Form Data : ", formData)
     console.log(formData.get('name'))
-    console.log(formData.get('age'))
+    console.log(formData.get('dob'))
 
 
     fetch('http://18.206.158.216/app/users', {
@@ -80,7 +79,7 @@ function showModal(message, shouldReset) {
     modalOkButton.addEventListener('click', closeHandler);
 
     window.onclick = function(event) {
-        if (event.target == modal) {
+        if (event.target === modal) {
             modal.style.display = 'none';
             if (shouldReset) {
                 document.getElementById('userForm').reset();
